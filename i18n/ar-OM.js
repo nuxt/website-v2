@@ -92,16 +92,16 @@ module.exports = {
           'الوضع الأكثر شهرة لNuxt. مع SSR، و يسمى أيضاً وضع "عالمي" أو "متماثل" خادم Node.js سيستخدم لتوصيل أساس HTML في مكونات Vue للعميل بدلاً من javascript نقي. باستخدام SSR سيؤدي إلى زيادة كبيرة في تحسين محركات البحث، تجربة مستخدم أفضل والمزيد من الفرص (مقارنةً بـ Vue SPA التقليدي). {break}نظرًا لأن تطبيق SSR بمفردك يمكن أن يكون مملاً حقًا ، يمنحك Nuxt.js دعمًا كاملاً من خارج الصندوق وسيهتم بالمآزِق الشائعة.'
       },
       ssg: {
-        title: 'Statically Generated',
+        title: 'مولّد ثابت',
         description:
-          'Static Site Generation is a very hot topic right now (aka JAMStack). Instead of switching to another framework and spending time to get used to it, why not kill two birds with one stone? {proverbial} Nuxt.js supports generating a static website based on your Vue application. It is the "best of both worlds" as you don\'t need a server but still have SEO benefits because Nuxt will pre-render all pages and include the necessary HTML. Also, you can deploy the resulting page easily to Netlify or GitHub pages.',
-        proverbial: 'only proverbial'
+          'توليد المواقع الثابتة موضوع رائج في الوقت الحالي (المعروف باسم JAMStack). وبدلاً من الانتقال إلى إطار عمل جديد واستهلاك الوقت في التأقلم معه، ما رأيك بحل يحقق هدفين في آنٍ واحد؟ يتيح Nuxt.js إنشاء موقع ثابت باستخدام تطبيق Vue الخاص بك. إنه يجمع "أفضل ما في العالمين"—فلا حاجة لخادم مع الاحتفاظ بمزايا تحسين محركات البحث (SEO)، حيث يقوم Nuxt بتحميل الصفحات مسبقاً مع HTML المطلوب. كما يمكنك نشر الموقع الناتج بسهولة على Netlify أو GitHub Pages.',
+        proverbial: 'فقط مجازي'
       }
     },
     sponsors: {
       title: 'الرُعاة',
       description:
-        'NuxtJS is an MIT licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. If you run a business and are using Nuxt in a revenue-generating product, it makes business sense to sponsor Nuxt development: it ensures the project that your product relies on stays healthy and actively maintained. It can also help your exposure in the Vue/Nuxt community and makes it easier to attract Vue/Nuxt developers. If you are an individual user and have enjoyed the productivity of using Nuxt, consider donating as a sign of appreciation.',
+        'NuxtJS هو مشروع مفتوح المصدر مرخص بموجب ترخيص MIT ومجاني تمامًا للاستخدام. ومع ذلك، فإن الجهد المطلوب لصيانة وتطوير ميزات جديدة للمشروع ليس مستدامًا بدون دعم مالي مناسب. إذا كنت تدير عملًا تجاريًا وتستخدم Nuxt في منتج يحقق إيرادات، فإنه من المنطقي تجاريًا دعم تطوير Nuxt: فهذا يضمن بقاء المشروع الذي يعتمد عليه منتجك في حالة صحية ويتم صيانته بنشاط. كما يمكن أن يساعد في زيادة تعرضك في مجتمع Vue/Nuxt ويسهل جذب المطورين المختصين بـ Vue/Nuxt. إذا كنت مستخدمًا فرديًا وقد استمتعت بإنتاجية استخدام Nuxt، فكر في التبرع كعلامة تقدير.',
       become_a_sponsor: 'كن راعياً'
     },
     newsletter: {
@@ -126,198 +126,198 @@ module.exports = {
     },
     title: '{nuxt} تصميم',
     description:
-      'NuxtJS is an MIT licensed open source project and completely free to use. {break} You can freely use our logos as long as you mention NuxtJS and link to nuxtjs.org.',
+      'NuxtJS هو مشروع مفتوح المصدر مرخص بموجب ترخيص MIT ومجاني تمامًا للاستخدام. {break} يمكنك استخدام شعاراتنا بحرية طالما تذكر NuxtJS وتضع رابطًا إلى nuxtjs.org.',
     other_download_message:
-      'You can also download our {favicon} or our {sketch} file.'
+      'يمكنك أيضًا تنزيل {favicon} أو ملف {sketch} الخاص بنا.'
   },
   resources: {
     meta: {
-      title: 'NuxtJS Resources',
+      title: 'موارد NuxtJS',
       description:
-        'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.'
+        'اكتشف مجموعة من الموارد التي أنشأها شركاؤنا. من خلال استخدام روابط الموارد التابعة، فإنك تساعدنا في الحفاظ على إطار عمل المصدر المفتوح وتطويره.'
     },
-    title: '{nuxt} Resources',
+    title: '{nuxt} موارد',
     description:
-      'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.',
+      'اكتشف مجموعة من الموارد التي أنشأها شركاؤنا. من خلال استخدام روابط الموارد التابعة، فإنك تساعدنا في الحفاظ على إطار عمل المصدر المفتوح وتطويره.',
     themes: {
-      title: 'Themes'
+      title: 'المواضيع'
     },
     modules: {
-      title: 'Modules'
+      title: 'وحدات'
     },
     examples: {
-      title: 'Examples'
+      title: 'أمثلة'
     },
     faq: {
-      title: 'FAQ'
+      title: 'الأسئلة المتداولة'
     },
     videos: {
-      title: 'Video Courses'
+      title: 'دورات الفيديو'
     }
   },
   shop: {
     meta: {
-      title: 'The NuxtJS Shop',
+      title: 'متجر NuxtJS',
       description:
-        'You want to support the NuxtJS project and show your love to the rest of the community? Here our products with the best quality ever!'
+        'هل تريد دعم مشروع NuxtJS وإظهار حبك لبقية المجتمع؟ إليك منتجاتنا بأفضل جودة على الإطلاق!'
     },
-    title: 'The {nuxt} Shop',
+    title: 'متجر {nuxt}',
     description:
-      'You want to support the NuxtJS project and show your love to the rest of the community?{break} Here our products with the best quality ever!',
-    button: 'Coming soon'
+      'هل تريد دعم مشروع NuxtJS وإظهار حبك لبقية المجتمع؟ {break} إليك منتجاتنا بأفضل جودة على الإطلاق!',
+    button: 'قريباً'
   },
   team: {
     meta: {
-      title: 'NuxtJS Team',
+      title: 'NuxtJS فريق',
       description:
-        'NuxtJS has a very active and engaged team that is constantly striving to push Nuxt forward.'
+        'يتمتع NuxtJS بفريق نشط للغاية ومنخرط يسعى باستمرار إلى دفع Nuxt إلى الأمام.'
     },
-    title: '{nuxt} Team',
+    title: '{nuxt} فريق',
     description:
-      'The development of NuxtJS and its ecosystem is guided by an international team. We have a very active and engaged team that is constantly striving to push Nuxt forward.'
+      'يتم تطوير NuxtJS ونظامه البيئي تحت إشراف فريق دولي. لدينا فريق نشط للغاية ومنخرط يسعى باستمرار لدفع Nuxt إلى الأمام.'
   },
   themes: {
     meta: {
-      title: 'NuxtJS Themes',
+      title: 'مواضيع NuxtJS',
       description:
-        'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.'
+        'باستخدام السمات أدناه التي بناها شركاؤنا من Creative Tim و Theme Forest، يمكنك رؤية كيفية بناء تطبيق في العالم الحقيقي، مع وجود Nuxt.js خلفه.'
     },
-    title: '{nuxt} Themes',
+    title: '{nuxt} مواضيع',
     description:
-      'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.',
-    button: 'GET IT for'
+      'باستخدام السمات أدناه التي بناها شركاؤنا من Creative Tim و Theme Forest، يمكنك رؤية كيفية بناء تطبيق في العالم الحقيقي، مع وجود Nuxt.js خلفه.',
+    button: 'احصل عليه لـ'
   },
   'video-courses': {
     meta: {
-      title: 'NuxtJS Video Courses',
+      title: 'دورات الفيديو لـ NuxtJS',
       description:
-        'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.'
+        'من خلال دورات الفيديو أدناه التي أنشأها شريكنا VueSchool، يمكنك اكتشاف وتعلم المزيد عن إطار عمل Nuxt.js.'
     },
-    title: '{nuxt} Video Courses',
+    title: 'دورات الفيديو لـ {nuxt}',
     description:
-      'With the video courses below you can discover and learn more about the Nuxt Framework.',
+      'من خلال الدورات الفيديو أدناه، يمكنك اكتشاف وتعلم المزيد عن إطار عمل Nuxt.',
     cta: {
-      discover: 'Discover Mastering Nuxt',
-      start: 'START COURSE'
+      discover: 'اكتشف إتقان Nuxt',
+      start: 'ابدأ الدورة'
     }
   },
   sponsor: {
     meta: {
-      title: 'Sponsor NuxtJS Development',
+      title: 'رعاية تطوير NuxtJS',
       description:
-        'You can support NuxtJS development via different methods and ensure regular updates to the framework.'
+        'يمكنك دعم تطوير NuxtJS عبر طرق مختلفة وضمان التحديثات المنتظمة للإطار.'
     },
-    title: 'Sponsor {nuxt} Development',
+    title: 'رعاية تطوير {nuxt}',
     description:
-      'NuxtJS is an MIT licensed open source project and completely free to use.{break} However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.{break} You can support NuxtJS development via the following methods:',
+      'NuxtJS هو مشروع مفتوح المصدر مرخص بموجب رخصة MIT ومجاني تمامًا للاستخدام. {break} ومع ذلك، فإن الجهود اللازمة لصيانة وتطوير ميزات جديدة للمشروع لا يمكن الاستمرار فيها بدون دعم مالي مناسب. {break} يمكنك دعم تطوير NuxtJS عبر الطرق التالية:',
     donations: {
-      title: 'One-time donations',
-      description: 'We accept donations through these channels'
+      title: 'التبرعات لمرة واحدة',
+      description: 'نقبل التبرعات من خلال هذه القنوات'
     },
     pledges: {
-      title: 'Recurring Pledges',
+      title: 'الالتزامات المتكررة',
       description:
-        'Recurring pledges come with exclusive perks, e.g. having your name listed in the NuxtJS GitHub repository, or have your company logo placed on this website. Become a nuxter or sponsor via {opencollective} (goes into a fund with transparent expense models supporting community efforts and events).'
+        'الالتزامات المتكررة تأتي مع مزايا حصرية، مثل إدراج اسمك في مستودع NuxtJS على GitHub، أو وضع شعار شركتك على هذا الموقع. كن نُوكْسْتَر أو راعيًا عبر {opencollective} (يذهب إلى صندوق بنماذج إنفاق شفافة لدعم جهود وفعاليات المجتمع).'
     },
-    become_a_sponsor: 'Become a sponsor'
+    become_a_sponsor: 'كن راعيًا'
   },
   support: {
     meta: {
-      title: 'The NuxtJS Support',
+      title: 'دعم NuxtJS',
       description:
-        'Our NuxtJS team now offers official consulting services for your NuxtJS applications.'
+        'فريق NuxtJS لدينا يقدم الآن خدمات استشارية رسمية لتطبيقات NuxtJS الخاصة بك.'
     },
-    title: 'Consulting {nuxt} Support',
+    title: 'الدعم الاستشاري لـ {nuxt}',
     description:
-      'Our {team} now offers official consulting services for your NuxtJS applications.{break} We offer different services depending of your needs, from technical support to custom development. Expect a reply within one business day, we can sign custom NDA and you can get a full refund if you are not satisfied with our service.',
+      'فريقنا {team} يقدم الآن خدمات استشارية رسمية لتطبيقات NuxtJS الخاصة بك. {break} نقدم خدمات مختلفة حسب احتياجاتك، من الدعم الفني إلى التطوير المخصص. نتوقع الرد في غضون يوم عمل واحد، يمكننا توقيع اتفاقية سرية مخصصة ويمكنك الحصول على استرداد كامل إذا لم تكن راضيًا عن خدماتنا.',
     technical: {
-      title: 'Technical support',
+      title: 'الدعم الفني',
       description:
-        'Get project audits, app deployments, custom development and technical support from the NuxtJS team.',
-      start: 'Start chat',
+        'احصل على تدقيقات للمشاريع، نشر التطبيقات، تطوير مخصص ودعم تقني من فريق NuxtJS.',
+      start: 'ابدأ الدردشة',
       partner: {
-        pre: 'We partnered with',
+        pre: 'تعاوننا مع',
         post:
-          'to offer these services so we can focus on helping you as fast as possible.'
+          'لتقديم هذه الخدمات حتى نتمكن من التركيز على مساعدتك بأسرع ما يمكن.'
       }
     },
     entreprise: {
-      title: 'for enterprise',
+      title: 'للمؤسسات',
       description:
-        'NuxtJS and the maintainers of thousands of other packages are working with Tidelift to deliver one enterprise subscription that covers all of the open source you use.{break} If you want the flexibility of open source and the confidence of commercial-grade software, this is for you.',
+        'يعمل NuxtJS ومشرفو الآلاف من الحزم الأخرى مع Tidelift لتقديم اشتراك واحد للمؤسسات يغطي جميع المصادر المفتوحة التي تستخدمها. {break} إذا كنت ترغب في مرونة المصادر المفتوحة وثقة البرمجيات ذات الجودة التجارية، فهذا لك.',
       partner: {
-        pre: 'Available as part of the',
-        post: 'subscription.'
+        pre: 'متاح كجزء من',
+        post: 'الاشتراك.'
       },
-      learn_more: 'Learn more',
-      request_a_demo: 'Request a demo'
+      learn_more: 'اعرف المزيد',
+      request_a_demo: 'اطلب عرضًا توضيحيًا'
     }
   },
   blog: {
     meta: {
-      title: 'NuxtJS Blog',
+      title: 'مدونة NuxtJS',
       description:
-        'Discover articles from the NuxtJS team and NuxtJS Community about NuxtJS, tips and tricks included!'
+        'اكتشف المقالات من فريق NuxtJS ومجتمع NuxtJS حول NuxtJS، بما في ذلك النصائح والحيل!'
     },
-    title: '{nuxt} Blog',
+    title: 'مدونة {nuxt}',
     description:
-      'Discover articles from the {nuxtTeam} and {nuxtCommunity} about NuxtJS, tips and tricks included!',
-    nuxt_team: 'NuxtJS Team',
-    nuxt_community: 'Nuxt.js Community',
-    contribute: 'Caught a mistake or want to contribute to this blog post?'
+      'اكتشف المقالات من {nuxtTeam} و {nuxtCommunity} حول NuxtJS، بما في ذلك النصائح والحيل!',
+    nuxt_team: 'فريق NuxtJS',
+    nuxt_community: 'مجتمع Nuxt.js',
+    contribute: 'هل اكتشفت خطأ أو ترغب في المساهمة في هذه المقالة؟'
   },
   guide: {
-    release_notes: 'Release Notes',
-    toc_title: 'On this page'
+    release_notes: 'ملاحظات الإصدار',
+    toc_title: 'على هذه الصفحة'
   },
   quiz: {
-    title: 'Quiz'
+    title: 'اختبار'
   },
   tryNewDocs: {
-    msg1: 'Want to take a look at our new docs? Our ',
-    link: 'new docs',
-    msg2: 'are now in beta. Have fun!'
+    msg1: 'هل ترغب في إلقاء نظرة على وثائقنا الجديدة؟ لدينا',
+    link: 'الوثائق الجديدة',
+    msg2: 'أصبحت الآن في المرحلة التجريبية. استمتع!'
   },
   contribute: {
-    title: 'Contributors',
-    docs: 'Caught a mistake or want to contribute to the documentation?',
-    blog: 'Caught a mistake or want to contribute to this blog post?',
-    edit_on_github: 'Edit this page on GitHub!',
+    title: 'المساهمون',
+    docs: 'هل اكتشفت خطأ أو ترغب في المساهمة في التوثيق؟',
+    blog: 'هل اكتشفت خطأ أو ترغب في المساهمة في هذه المقالة؟',
+    edit_on_github: 'قم بتحرير هذه الصفحة على GitHub!',
     msg1:
-      'Contribution for this page is now closed. If you would like to contribute please check out our',
-    link: 'new docs'
+      'تم إغلاق المساهمة في هذه الصفحة الآن. إذا كنت ترغب في المساهمة، يرجى التحقق من',
+    link: 'الوثائق الجديدة'
   },
   example: {
-    intro: 'In this example:'
+    intro: 'في هذا المثال:'
   },
   codeSandbox: {
-    open: 'See Example'
+    open: 'انظر المثال'
   },
   content: {
     guide: {
-      prologue: 'Prologue',
-      'getting-started': 'Getting Started'
+      prologue: 'المقدمة',
+      'getting-started': 'البدء'
     },
     api: {
       essential: 'الأساسية',
       pages: 'الصفحات',
       components: 'العناصر',
-      utils: 'Utils',
+      utils: 'الأدوات المساعدة',
       configuration: 'الإعدادات',
-      programmatically: 'Programmatically',
-      internals: 'Internals'
+      programmatically: 'برمجيًا',
+      internals: 'الداخليات'
     },
     examples: {
-      routing: 'Routing',
+      routing: 'التوجيه',
       dataFetching: 'جلب البيانات',
-      assetManagement: 'Asset Management',
-      transitions: 'Transitions',
+      assetManagement: 'إدارة الأصول',
+      transitions: 'الانتقالات',
       seo: 'SEO',
       loading: 'جارِ التحميل',
-      miscellaneous: 'Miscellaneous',
-      middleware: 'Middleware',
-      plugins: 'Plugins',
-      modules: 'Modules',
+      miscellaneous: 'متفرقات',
+      middleware: 'البرمجيات الوسيطة',
+      plugins: 'الإضافات',
+      modules: 'الوحدات',
       customization: 'التفصيل',
       advanced: 'التقدم'
     },

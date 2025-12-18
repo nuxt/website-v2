@@ -38,6 +38,28 @@ Your app's Settings section on the Heroku dashboard should contain this:
 
 ![nuxt config vars Heroku](https://user-images.githubusercontent.com/23453691/116850762-81ea0e00-abf1-11eb-9f70-260721a1d525.png)
 
+Second, configure your app's `package.json` for the Heroku build process by adding a `heroku-postbuild` object to the scripts section to run the appropriate `nuxt` command for your app's [`nuxt.config.js` `target`](https://nuxtjs.org/docs/configuration-glossary/configuration-target/). 
+For server apps use:
+```json
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "heroku-postbuild": "npm run build"
+  },
+```
+or for static apps:
+```json
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "heroku-postbuild": "npm run generate"
+  },
+```
+
 Finally, we can push the app on Heroku with:
 
 ```bash

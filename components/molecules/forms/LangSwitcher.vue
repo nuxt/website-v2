@@ -6,6 +6,7 @@
     placement="bottom"
     mode="hover"
     class="inline-flex items-center w-12 h-12"
+    label="Language switcher"
   >
     <template #trigger>
       <IconTranslate class="d-icon" :class="iconClass" />

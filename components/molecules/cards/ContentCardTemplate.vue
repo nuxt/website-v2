@@ -76,7 +76,7 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const imgUrl = computed(() => props.image || 'https://source.unsplash.com/random')
+    const imgUrl = computed(() => props.image || 'https://images.unsplash.com/photo-1763568258327-034710107b93?w=800&h=500&fit=crop&q=80')
 
     function navigateToUrl(href) {
       const isInternal = href.startsWith('/') && href.startsWith('//') === false

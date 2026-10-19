@@ -1,0 +1,5 @@
+# v2.nuxt.com only redirects to nuxt.com: nothing to build, `redirects/` is deployed as is.
+[build]
+  base = "redirects/"
+  publish = "."
+  command = "echo 'redirect-only site'"
